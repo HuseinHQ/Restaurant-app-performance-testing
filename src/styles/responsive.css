@@ -1,0 +1,127 @@
+@media screen and (min-width: 710px) {
+  .restaurant-list{
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 60px;
+  }
+  .nav{
+    display: flex;
+  }
+  header{
+    grid-template-columns: 2fr 5fr;
+  }
+  .hero{
+    min-height: 265px;
+  }
+  .navigation{
+    display: grid;
+  }
+  .nav__item{
+    display: inline;
+    list-style-type: none;
+    border: none;
+    margin: auto 0px;
+    text-align: right;
+  }
+  .header__menu{
+    display: none;
+  }
+  #drawer{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .restaurant-list{
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 100px;
+  }
+  .hero{
+    min-height: 300px;
+  }
+  .nav__item{
+    margin: auto 20px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .review-main {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .review-main {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .review-main {
+    grid-template-columns: 3fr 8fr;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .restaurant-detail {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .review-detail {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .review-detail {
+    grid-column: span 3;
+  }
+  .review-main {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .restaurant-detail {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .restaurant-thumbnail{
+    grid-column: span 6;
+  }
+  .restaurant__info{
+    grid-column: span 6;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .review-main{
+    grid-template-columns: 1fr 7fr;
+  }
+  .review-detail {
+    grid-column: span 6;
+    margin: 10px 100px;
+  }
+  .review-main {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .review-detail {
+    margin: 10px 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .review-detail {
+    margin: 10px 50px;
+  }
+  .review-main {
+    grid-template-columns: 2fr 8fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .review-detail {
+    margin: 10px 20px;
+  }
+}

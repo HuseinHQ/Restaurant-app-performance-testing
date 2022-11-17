@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fjalla One', sans-serif;
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh; 
+  margin: 0; 
+  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
+
+button {
+  align-items: center;
+  border: none;
+  background: none;
+}
+
+header{
+  display: grid;
+  padding: 16px;
+  font-size:medium;
+  justify-content: center;
+  grid-template-columns: 1fr 4fr;
+}
+
+.header__menu{
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__title{
+  display: flex;
+}
+
+svg{
+  width: 24px;
+  margin-right: 16px;
+}
+
+.navigation{
+  display: none;
+  align-items: center;
+  justify-content: right;
+  font-size: larger;
+}
+
+.navigation > ul > li > a{
+  padding: 10px;
+}
+
+.nav{
+  z-index: 10;
+  background-color: #fff;
+  width: 300px;
+  position: absolute;
+  top: 76px;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+
+.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.nav__item {
+  display: list-item;
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+}
+.nav__item > a{
+  display: inline-block;
+  padding: 20px 100px 20px 20px;     
+  text-decoration: none;
+  color: black;
+}
+
+.header__image{
+  display: inline;
+  border: 10px;
+  background-image: url("../public/heros/fork-and-spoon.png");
+  background-position: center;
+  background-color: green;
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  min-height: 230px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  background-image: url("../public/heros/hero-image_4.jpg");
+  background-position: center center;
+  background-color: green;
+}
+
+.hero__inner{
+  color: white;
+}
+
+/* Restaurant Item */
+.main-title{
+  padding: 20px;
+  text-align: center;
+}
+
+.restaurant-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px;
+  justify-items: center;
+}
+
+.restaurant-item {
+  display: grid;
+  margin: 0 10px 18px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.restaurant-item:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px;
+}
+
+.resto-img{
+  position: relative;
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.fan-art-restaurant {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.restaurant-city {
+  position: absolute;
+  margin-top: -160px;
+  background: rgba(255,255,255, 0.8);
+  padding: 5px 10px 5px 30px;
+  border-radius: 0 2px 2px 0;
+}
+
+.restaurant-info {
+  padding: 24px;
+  padding-top: 0px;
+}
+
+.restaurant-info a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.restaurant-info a:hover {
+  color: blue;
+}
+ 
+.restaurant-info > h2 {
+  font-weight: lighter;
+}
+ 
+.restaurant-info > p {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* number of lines to show */
+}
+
+.rating {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Restaurant Detail */
+
+.restaurant-detail {
+  display: grid;
+  margin: 50px 120px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.restaurant-thumbnail {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.restaurant__name {
+  margin-bottom: 20px;
+}
+
+.restaurant__description{
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.restaurant__description > h3{
+  margin-bottom: 10px;
+}
+
+.customer-review {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.review-detail {
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  grid-column: span 2;
+}
+
+.review-main {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  margin-bottom: 15px;
+}
+
+.review-main > i {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.review-main > p {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.restaurant__info {
+  margin-left: 20px;
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+.restaurant__info > p {
+  margin-top: 10px;
+}
+
+.restaurant__info > h3 {
+  margin-top: 10px;
+}
+
+.restaurant__poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+footer{
+  text-align: center;
+}
+
+footer > p {
+  margin: 16px;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 100%;
+  margin: auto;
+  display: none;
+  animation: spin 1s infinite linear;
+  grid-column: span 6;
+  margin: 100px;
+}
+#loading.display {
+  display: block;
+}
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.skeleton {
+  height: 376.8px;
+}
