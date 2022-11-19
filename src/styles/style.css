@@ -156,6 +156,11 @@ svg{
   box-shadow: 0 0 0 2px;
 }
 
+.no-favorite{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
 .resto-img{
   position: relative;
   width: 100%;
