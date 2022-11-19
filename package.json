@@ -11,7 +11,8 @@
     "test": "karma start",
     "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Muhammad Husein Al Hakim <mhusein463@gmail.com>",
