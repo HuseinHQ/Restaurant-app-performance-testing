@@ -126,10 +126,14 @@
   }
 }
 
-@media 
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) { 
+@media only screen and (max-width: 650px) {
   .hero {
-    background-image: url("../public/heros/hero-image_4_small.jpg");
+      background-image: url("../public/heros/hero-image_4_small.jpg");
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  .hero {
+      background-image: url("../public/heros/hero-image_4.jpg");
   }
 }
