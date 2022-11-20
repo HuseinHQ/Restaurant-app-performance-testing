@@ -46,8 +46,12 @@ Scenario('Unliking a restaurant', async ({ I }) => {
   I.seeElement('.restaurant-info a');
   I.click(firstRestaurant);
 
+  I.waitForElement('#likeButton', 10);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
+  I.waitForElement('.no-favorite', 10);
+  const noFavorite = await I.grabTextFrom('.no-favorite');
+  assert.strictEqual(noFavorite, 'Tidak ada list favorite untuk ditampilkan');
 });

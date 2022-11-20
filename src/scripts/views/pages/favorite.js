@@ -16,6 +16,10 @@ const Favorite = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
+    if (restaurants.length === 0) {
+      restaurantsContainer.innerHTML = '<p class="no-favorite">Tidak ada list favorite untuk ditampilkan</p>';
+      return;
+    }
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

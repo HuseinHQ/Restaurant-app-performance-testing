@@ -33,7 +33,7 @@ const createRestaurantReviewTemplate = (review) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item skeleton">
     <div>
-      <img class="resto-img skeleton lazyload" src="${CONFIG.IMAGE_URL.SMALL + restaurant.pictureId}" alt="${restaurant.name}">
+      <img class="resto-img skeleton lazyload" data-src="${CONFIG.IMAGE_URL.SMALL + restaurant.pictureId}" alt="${restaurant.name}">
       <div class="restaurant-city"><p>Kota ${restaurant.city}</p></div>
     </div>
     <div class="restaurant-info">
